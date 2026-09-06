@@ -7,7 +7,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![GSAP](https://img.shields.io/badge/GSAP-3.12-88CE02?style=for-the-badge&logo=greensock)](https://greensock.com/gsap/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 A high-performance, animation-rich, modern developer portfolio web application built with **Next.js 15 (App Router)**, **React 19**, **GSAP**, **Lenis Smooth Scroll**, and **Tailwind CSS**.
 
@@ -194,7 +193,6 @@ NEXT_PUBLIC_SITE_URL=https://sarthakpandey.dev
 ## 📜 Attribution & License
 
 - **Design & Code**: Maintained by [Sarthak Pandey](https://github.com/Sarthak-Pandey).
-- **License**: Distributed under the [MIT License](LICENSE).
 
 <div align="center">
   <sub>Built with ❤️ by Sarthak Pandey</sub>
