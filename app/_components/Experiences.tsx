@@ -54,7 +54,7 @@ const Experiences = () => {
     return (
         <section className="py-section" id="my-experience">
             <div className="container" ref={containerRef}>
-                <SectionTitle title="My Experience" />
+                <SectionTitle title="Education & Journey" />
 
                 <div className="grid gap-14">
                     {MY_EXPERIENCE.map((item) => (

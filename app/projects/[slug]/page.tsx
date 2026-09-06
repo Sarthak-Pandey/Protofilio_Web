@@ -15,11 +15,19 @@ export const generateMetadata = async ({
     const { slug } = await params;
     const project = PROJECTS.find((project) => project.slug === slug);
 
+    if (!project) {
+        return {
+            title: 'Project Not Found',
+        } as Metadata;
+    }
+
+    const cleanDescription = project.description
+        ? project.description.replace(/<[^>]*>/g, ' ').trim()
+        : '';
+
     return {
-        title: `${project?.title} - ${project?.techStack
-            .slice(0, 3)
-            .join(', ')}`,
-        description: project?.description,
+        title: `${project.title} - ${project.techStack ? project.techStack.slice(0, 3).join(', ') : ''}`,
+        description: cleanDescription,
     } as Metadata;
 };
 

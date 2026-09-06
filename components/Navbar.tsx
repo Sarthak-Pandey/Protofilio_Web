@@ -22,7 +22,7 @@ const MENU_LINKS = [
         url: '/#about-me',
     },
     {
-        name: 'Experience',
+        name: 'Education & Journey',
         url: '/#my-experience',
     },
     {
@@ -34,6 +34,7 @@ const MENU_LINKS = [
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
+    const githubUrl = SOCIAL_LINKS.find(s => s.name === 'github')?.url || 'https://github.com/Sarthak-Pandey';
 
     return (
         <>
@@ -91,10 +92,10 @@ const Navbar = () => {
                     )}
                 ></div>
 
-                <div className="grow flex md:items-center w-full max-w-[300px] mx-8 sm:mx-auto">
-                    <div className="flex gap-10 lg:justify-between max-lg:flex-col w-full">
-                        <div className="max-lg:order-2">
-                            <p className="text-muted-foreground mb-5 md:mb-8">
+                <div className="grow flex md:items-center w-full max-w-[360px] sm:max-w-[400px] mx-8 sm:mx-auto">
+                    <div className="flex gap-8 sm:gap-12 justify-between w-full">
+                        <div className="shrink-0">
+                            <p className="text-muted-foreground mb-5 md:mb-8 font-mono text-sm tracking-wider">
                                 SOCIAL
                             </p>
                             <ul className="space-y-3">
@@ -104,7 +105,7 @@ const Navbar = () => {
                                             href={link.url}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="text-lg capitalize hover:underline"
+                                            className="text-lg capitalize hover:underline hover:text-white transition-colors"
                                         >
                                             {link.name}
                                         </a>
@@ -112,8 +113,8 @@ const Navbar = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="">
-                            <p className="text-muted-foreground mb-5 md:mb-8">
+                        <div className="shrink-0">
+                            <p className="text-muted-foreground mb-5 md:mb-8 font-mono text-sm tracking-wider">
                                 MENU
                             </p>
                             <ul className="space-y-3">
@@ -124,12 +125,12 @@ const Navbar = () => {
                                                 router.push(link.url);
                                                 setIsMenuOpen(false);
                                             }}
-                                            className="group text-xl flex items-center gap-3"
+                                            className="group text-xl flex items-start gap-3 text-left"
                                         >
                                             <span
                                                 className={cn(
-                                                    'size-3.5 bg-white/20 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all',
-                                                    COLORS[idx],
+                                                    'size-3.5 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-1.5 group-hover:scale-[180%] transition-all',
+                                                    COLORS[idx % COLORS.length],
                                                 )}
                                             >
                                                 <MoveUpRight
@@ -137,7 +138,9 @@ const Navbar = () => {
                                                     className="scale-0 group-hover:scale-100 transition-all"
                                                 />
                                             </span>
-                                            {link.name}
+                                            <span className="whitespace-nowrap sm:whitespace-normal">
+                                                {link.name}
+                                            </span>
                                         </button>
                                     </li>
                                 ))}
@@ -146,11 +149,17 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="w-full max-w-[300px] mx-8 sm:mx-auto">
-                    <p className="text-muted-foreground mb-4">GET IN TOUCH</p>
-                    <a href={`mailto:${GENERAL_INFO.email}`}>
-                        {GENERAL_INFO.email}
-                    </a>
+                <div className="w-full max-w-[360px] sm:max-w-[400px] mx-8 sm:mx-auto">
+                    <p className="text-muted-foreground mb-4 font-mono text-sm tracking-wider">CONNECT</p>
+                    {GENERAL_INFO.email ? (
+                        <a href={`mailto:${GENERAL_INFO.email}`} className="hover:underline hover:text-white transition-colors">
+                            {GENERAL_INFO.email}
+                        </a>
+                    ) : (
+                        <a href={githubUrl} target="_blank" rel="noreferrer" className="hover:underline text-primary">
+                            GitHub Profile
+                        </a>
+                    )}
                 </div>
             </div>
         </>

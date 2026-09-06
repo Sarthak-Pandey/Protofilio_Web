@@ -1,24 +1,30 @@
 import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
-
+    email: "sarthakpandey5667@gmail.com",
     emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
-
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    emailBody: 'Hi Sarthak, I am reaching out to you because...',
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
+    { name: 'github', url: 'https://github.com/Sarthak-Pandey' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/sarthak-pandey-481248307/' },
+    { name: 'instagram', url: 'https://www.instagram.com/sar_thak.io/' },
+];
+
+export const PORTFOLIO_STATS = [
+    { label: 'Public Repositories', value: '20+' },
+    { label: 'Featured Projects', value: '6' },
+    { label: 'Core Technologies', value: '8+' },
 ];
 
 export const MY_STACK = {
-    frontend: [
+    languages: [
+        // Added official C++ logo downloaded from Simple Icons CDN
+        {
+            name: 'C++',
+            icon: '/logo/cpp.svg',
+        },
         {
             name: 'JavaScript',
             icon: '/logo/js.png',
@@ -27,13 +33,30 @@ export const MY_STACK = {
             name: 'TypeScript',
             icon: '/logo/ts.png',
         },
+        // Added official Python logo downloaded from Simple Icons CDN
+        {
+            name: 'Python',
+            icon: '/logo/python.svg',
+        },
+    ],
+    frontend: [
+        // Added official HTML5 logo downloaded from Simple Icons CDN
+        {
+            name: 'HTML5',
+            icon: '/logo/html5.svg',
+        },
+        // Added official CSS3 logo downloaded from Simple Icons CDN
+        {
+            name: 'CSS3',
+            icon: '/logo/css3.svg',
+        },
         {
             name: 'React',
             icon: '/logo/react.png',
         },
         {
             name: 'Next.js',
-            icon: '/logo/next.png',
+            icon: '/logo/next-colored.png',
         },
         {
             name: 'Redux',
@@ -42,14 +65,6 @@ export const MY_STACK = {
         {
             name: 'Tailwind CSS',
             icon: '/logo/tailwind.png',
-        },
-        {
-            name: 'GSAP',
-            icon: '/logo/gsap.png',
-        },
-        {
-            name: 'Framer Motion',
-            icon: '/logo/framer-motion.png',
         },
         {
             name: 'Sass',
@@ -66,30 +81,22 @@ export const MY_STACK = {
             icon: '/logo/node.png',
         },
         {
-            name: 'NestJS',
-            icon: '/logo/nest.svg',
-        },
-        {
             name: 'Express.js',
-            icon: '/logo/express.png',
+            icon: '/logo/express-colored.png',
         },
     ],
     database: [
         {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
+            name: 'MongoDB',
+            icon: '/logo/mongodb.svg',
         },
         {
             name: 'PostgreSQL',
             icon: '/logo/postgreSQL.png',
         },
         {
-            name: 'MongoDB',
-            icon: '/logo/mongodb.svg',
-        },
-        {
-            name: 'Prisma',
-            icon: '/logo/prisma.png',
+            name: 'MySQL',
+            icon: '/logo/mysql.svg',
         },
     ],
     tools: [
@@ -98,211 +105,246 @@ export const MY_STACK = {
             icon: '/logo/git.png',
         },
         {
+            name: 'GitHub',
+            icon: '/logo/github-colored.png',
+        },
+        {
             name: 'Docker',
             icon: '/logo/docker.svg',
         },
+        // Added official Visual Studio Code logo downloaded from Simple Icons CDN
         {
-            name: 'AWS',
-            icon: '/logo/aws.png',
+            name: 'VS Code',
+            icon: '/logo/vscode.svg',
         },
     ],
 };
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'Electro EV',
-        slug: 'electro-ev',
-        liveUrl: 'https://electroev.co.uk/',
+        title: 'Snitch',
+        slug: 'snitch',
+        sourceCode: 'https://github.com/Sarthak-Pandey/Snitch',
         year: 2025,
         description: `
-      A complete agency portfolio platform built for Electro EV to showcase their services, blog content, and product offerings. <br/> <br/>
-      
-      Key Features:<br/>
-      <ul>
-        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
-        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
-        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
-        <li>📱 Fully Responsive: Optimized for all device sizes</li>
-        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
-      </ul><br/>
-      
-      Technical Highlights:
-      <ul>
-        <li>Implemented complex slider synchronization logic using Swiper.js</li>
-        <li>Customized Payload CMS admin panel for intuitive content management</li>
-        <li>Developed reusable UI components with shadcn for design consistency</li>
-        <li>Configured efficient data fetching strategies in Next.js</li>
-      </ul>
-      `,
+        Snitch is a full-stack e-commerce and product management platform built with React, Redux Toolkit, and Node.js. <br/> <br/>
+        
+        Key Features:<br/>
+        <ul>
+          <li>🔒 Authentication System: Secure JWT token authentication with bcrypt password hashing</li>
+          <li>📊 Interactive 3D Product Viewer: Realtime 3D clothing model visualization powered by Three.js</li>
+          <li>📈 Custom Analytics: Data visualization graph featuring interactive radial statistics</li>
+          <li>☁️ Cloud Image Storage: Integrated ImageKit service for seamless media uploads</li>
+          <li>📦 Order & Product Management: Full CRUD operations for product inventory and categories</li>
+        </ul>
+        `,
         role: `
-      Full-Stack Developer <br/>
-      Owned the entire development lifecycle:
-      <ul>
-        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
-        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
-        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
-        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
-        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
-        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
-      </ul>
-      `,
-        techStack: [
-            'Next.js',
-            'Payload CMS',
-            'Tailwind CSS',
-            'shadcn',
-            'Swiper.js',
-            'React Hook Form',
-            'Vercel',
-        ],
-        thumbnail: '/projects/thumbnail/mti-electronics.webp',
-        longThumbnail: '/projects/long/mti-electronics.webp',
-        images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
-        ],
-    },
-    {
-        title: 'Epikcart',
-        slug: 'epikcart',
+        Full-Stack Developer <br/>
+        Designed and implemented end-to-end full-stack architecture:
+        <ul>
+          <li>✅ Backend: Built Express.js REST API with Mongoose schemas for users and products</li>
+          <li>🔒 Security: Implemented JWT middleware and role-based route protection</li>
+          <li>🎨 Frontend: Developed React frontend with Redux Toolkit for central state management</li>
+          <li>🧊 3D Integration: Created Three.js 3D canvas viewport for product interaction</li>
+        </ul>
+        `,
         techStack: [
             'React',
-            'Redux',
-            'React i18n',
+            'Redux Toolkit',
+            'Three.js',
+            'Node.js',
+            'Express',
+            'MongoDB',
+            'ImageKit',
             'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
         ],
-        thumbnail: '/projects/thumbnail/epikcart.jpg',
-        longThumbnail: '/projects/long/epikcart.jpg',
-        images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
-        ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
+        thumbnail: '/projects/thumbnail/snitch.png',
+        longThumbnail: '/projects/long/snitch.png',
+        images: ['/projects/images/snitch-1.png'],
     },
     {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
+        title: 'Chat Application',
+        slug: 'chat-application',
+        sourceCode: 'https://github.com/Sarthak-Pandey/Chat_Application',
+        year: 2025,
+        description: `
+        An AI-powered developer assistant and realtime chat application. Integrates Google GenAI and LangChain with custom tool calling to query GitHub, npm, and StackOverflow. <br/> <br/>
+        
+        Key Features:<br/>
+        <ul>
+          <li>🤖 Autonomous Tool Calling: AI agent calls external tools (GitHub API, npm registry, StackOverflow)</li>
+          <li>⚡ Realtime Messaging: Socket.io websocket integration for instant chat delivery</li>
+          <li>✉️ Email Verification: OTP verification system using Nodemailer</li>
+          <li>💬 Thread & Message Management: Persistent chat history stored in MongoDB</li>
+        </ul>
+        `,
+        role: `
+        AI & Full-Stack Developer <br/>
+        <ul>
+          <li>🧠 AI Engineering: Built LangChain tool-calling pipeline with system prompts</li>
+          <li>🔌 Sockets: Configured Socket.io event architecture on server and client</li>
+          <li>🗄️ Database: Designed MongoDB models for user profiles, chat threads, and messages</li>
+          <li>💻 Frontend: Built interactive dashboard UI with React Context API</li>
+        </ul>
+        `,
         techStack: [
-            'GPT-4',
-            'Next.js',
-            'Postgressql',
-            'Prisma',
-            'Tailwind CSS',
+            'React',
+            'Node.js',
+            'Express',
+            'MongoDB',
+            'Socket.io',
+            'Google GenAI',
+            'LangChain',
+            'Nodemailer',
         ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
+        thumbnail: '/projects/thumbnail/chat-app.png',
+        longThumbnail: '/projects/long/chat-app.png',
+        images: ['/projects/images/chat-app-1.png'],
     },
     {
-        title: 'Real Estate',
-        slug: 'property-pro',
+        title: 'Spendily',
+        slug: 'spendily',
+        sourceCode: 'https://github.com/Sarthak-Pandey/Spendily',
+        year: 2025,
+        description: `
+        Smart expense tracking and financial management platform built with Python Flask and SQLite, featuring an AI Financial Coach. <br/> <br/>
+        
+        Key Features:<br/>
+        <ul>
+          <li>💡 AI Financial Coach: Autonomous blueprint giving personalized spending advice</li>
+          <li>📈 Financial Analytics: Analytics, savings targets, and expense predictions</li>
+          <li>🗃️ Database Layer: Custom SQLite queries and transaction handling</li>
+          <li>🧪 Automated Testing: Comprehensive test suite written with Pytest and pytest-flask</li>
+        </ul>
+        `,
+        role: `
+        Python Backend & Full-Stack Developer <br/>
+        <ul>
+          <li>🐍 Backend: Developed modular Flask blueprints (ai_coach.py) and app routing</li>
+          <li>🗄️ Database: Built SQLite query manager (database/queries.py)</li>
+          <li>📊 Analytics: Created predictive savings and financial analysis modules</li>
+          <li>✅ Testing: Wrote full test coverage for all endpoints with Pytest</li>
+        </ul>
+        `,
         techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
+            'Python',
+            'Flask',
+            'SQLite',
+            'Pytest',
+            'pytest-flask',
+            'HTML5/CSS3',
         ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
+        thumbnail: '/projects/thumbnail/spendily.png',
+        longThumbnail: '/projects/long/spendily.png',
+        images: ['/projects/images/spendily-1.png'],
     },
-    {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
-    },
-    {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
 
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
+    {
+        title: 'AI Battle Arena',
+        slug: 'ai-battle-arena',
+        sourceCode: 'https://github.com/Sarthak-Pandey/Ai-Battle-arena',
+        year: 2025,
+        description: `
+        Multi-LLM battle arena platform where language models compete on complex programming problems evaluated by an automated AI Judge. <br/> <br/>
+        
+        Key Features:<br/>
+        <ul>
+          <li>⚔️ Model Arena: Realtime competition between multiple AI models</li>
+          <li>⚖️ AI Judge: Automated evaluation node grading code correctness</li>
+          <li>🕸️ LangGraph: Stateful multi-agent graph workflows</li>
+          <li>⚡ TypeScript Engine: Fully typed backend server environment</li>
+        </ul>
+        `,
+        role: `
+        AI Software Engineer <br/>
+        <ul>
+          <li>🕸️ Graph Design: Built LangGraph decision tree (graph.ai.ts)</li>
+          <li>💻 Backend: Developed TypeScript Express server infrastructure</li>
+          <li>🎛️ Frontend: Built JudgeCard and SolutionCard interactive UI components</li>
+        </ul>
+        `,
+        techStack: [
+            'TypeScript',
+            'Node.js',
+            'LangGraph',
+            'React',
+            'Tailwind CSS',
+        ],
+        thumbnail: '/projects/thumbnail/ai-battle-arena.png',
+        longThumbnail: '/projects/long/ai-battle-arena.png',
+        images: ['/projects/images/ai-battle-arena-1.png'],
+    },
+    {
+        title: 'ToDo App (AI-Assisted)',
+        slug: 'todo-app-assisted-with-ai',
+        sourceCode: 'https://github.com/Sarthak-Pandey/ToDo-App-Assisted-with-Ai',
+        year: 2025,
+        description: `
+        AI-assisted task management application built with Astro and TypeScript. <br/> <br/>
+        
+        Key Features:<br/>
+        <ul>
+          <li>⚡ Astro Architecture: High performance component rendering</li>
+          <li>🤖 AI Categorization: Automated task prioritization and tagging</li>
+          <li>📱 Modern UI: Responsive, accessible user interface</li>
+        </ul>
+        `,
+        role: `
+        Frontend Developer <br/>
+        <ul>
+          <li>⚡ Developed Astro pages and TypeScript state logic</li>
+          <li>🎨 Styled components with Tailwind CSS</li>
+        </ul>
+        `,
+        techStack: ['Astro', 'TypeScript', 'Tailwind CSS', 'Python'],
+        thumbnail: '/projects/thumbnail/todo-app.png',
+        longThumbnail: '/projects/long/todo-app.png',
+        images: ['/projects/images/todo-app-1.png'],
+    },
+    {
+        title: 'StudySync',
+        slug: 'studysync',
+        sourceCode: 'https://github.com/Sarthak-Pandey/StudySync',
+        liveUrl: 'https://sarthak-pandey.github.io/StudySync/',
+        year: 2024,
+        description: `
+        Modern, responsive educational platform landing page deployed live on GitHub Pages. <br/> <br/>
+        
+        Key Features:<br/>
+        <ul>
+          <li>📚 Educational Showcase: Course cards, feature highlights, and testimonials</li>
+          <li>⚡ Fast Load Speed: Optimized vanilla HTML5/CSS3 implementation</li>
+          <li>🌐 Live Deployment: Deployed on GitHub Pages</li>
+        </ul>
+        `,
+        role: `
+        Frontend Developer <br/>
+        <ul>
+          <li>🎨 Designed responsive HTML5 structure and custom CSS styling</li>
+          <li>🚀 Deployed site on GitHub Pages</li>
+        </ul>
+        `,
+        techStack: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages'],
+        thumbnail: '/projects/thumbnail/studysync.png',
+        longThumbnail: '/projects/long/studysync.png',
+        images: ['/projects/images/studysync-1.png'],
     },
 ];
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'Computer Science Engineering Student',
+        company: 'KIET Group of Institutions',
+        duration: 'Present',
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
+        title: 'Full-Stack Software Development',
+        company: 'Self-Directed Projects & Open Source',
+        duration: '2023 - Present',
     },
     {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
-    },
-    {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        title: 'Data Structures & Algorithms',
+        company: 'Competitive Problem Solving (C++)',
+        duration: 'Ongoing',
     },
 ];
